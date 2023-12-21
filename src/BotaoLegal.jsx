@@ -1,10 +1,10 @@
 import React from 'react'
 import './BotaoLegal.css'
 
-const BotaoLegal = ({texto}) => {
+const BotaoLegal = ({texto}, {emoji}) => {
   return (
    <button className="botao-legal">
-    { texto }
+    {emoji} { texto }
     </button>
   )
 }

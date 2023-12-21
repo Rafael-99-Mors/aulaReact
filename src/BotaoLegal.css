@@ -1,4 +1,5 @@
 .botao-legal{
+    padding-left: 50%;
     background-color: purple;
     color:#fff;
     padding:10px 20px;
@@ -8,6 +9,7 @@
 }
 
 .botao-legal:hover{
+    padding-left: 50%;
     background-color: #fff;
     color: purple;
     cursor: 1px solid purple;
