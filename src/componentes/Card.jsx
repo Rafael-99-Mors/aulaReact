@@ -1,13 +1,14 @@
 import React from 'react'
 import './Card.css'
 
-const Card = ({alimento}) => {
+const Card = ({alimento, descricao, children}) => {
   return (
     <div class="card-hover">
     <div class="card-hover__content">
       <h3 class="card-hover__title">
-        Make your <span>choice</span> right now!
-      </h3>
+        {descricao}
+        {children}
+      </h3> 
       <p class="card-hover__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officia quisquam doloremque nostrum laboriosam, blanditiis libero corporis nulla a aut?</p>
       <a href="#" class="card-hover__link">
         <span>Learn How</span>
