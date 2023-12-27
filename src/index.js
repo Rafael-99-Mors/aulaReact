@@ -1,25 +1,38 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Titulo from './Titulo';
-import BotaoLegal from './BotaoLegal';
-import Card from './componentes/Card';
-
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import Inicio from './pages/Inicio';
+import SobreNos from './pages/SobreNos';
+import Contato from './pages/Contato';
+import NossosClientes from './pages/NossosClientes';
+import Localizacao from './pages/Localizacao';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <div>
-    <Card alimento={'https://images.unsplash.com/photo-1586511925558-a4c6376fe65f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=60'} descricao={'Make your <span>choice</span> right now!'}>
-      gcftydctd
-      </Card>
-    <Card alimento= {'https://anamariabraga.globo.com/wp-content/uploads/2019/06/sucos-detox-desintoxicantes-1.jpg'} descricao={'Give a chance to a new try!'}>
 
-      <ul><li>1kg de arroz</li>
-      <li>1kg de arroz</li>
-      <li>1kg de arroz</li>
-      <li>1kg de arroz</li>
-      <li>1kg de arroz</li>
-      <li>1kg de arroz</li></ul>
-    </Card>
-  </div>
+const router = createBrowserRouter([
+      {
+      path: '/',
+      element: <Inicio/>
+      },
+      {
+        path: '/sobre-nos',
+        element: <SobreNos/>,
+      },
+      {
+        path: '/contato',
+        element: <Contato/>,
+      },
+      {
+        path: '/nossos-clientes',
+        element:<NossosClientes/>
+      },
+      {
+        path: '/localizacao',
+        element:<Localizacao/>
+      }
+])
+root.render(
+  <RouterProvider router={router}/>
+  
    
 );
